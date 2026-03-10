@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacBook Kalender</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
+
+  body {
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:#080810; font-family:'Syne',sans-serif; padding:2rem;
+  }
+
+  .container { text-align:center; animation:fadeUp 0.5s ease both; }
+
+  h1 { font-size:clamp(2rem,6vw,3.5rem); font-weight:800; color:#e2e0ff; letter-spacing:-0.04em; margin-bottom:0.4rem; }
+  h1 em { font-family:'Playfair Display',serif; font-style:italic; color:#7c6ff7; }
+  p { font-size:0.72rem; color:#5a5880; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:3rem; }
+
+  .cards { display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center; }
+
+  .card {
+    width:220px; padding:2rem 1.5rem;
+    border-radius:20px; border:1px solid;
+    text-decoration:none; cursor:pointer;
+    transition:transform 0.2s, box-shadow 0.2s;
+    display:flex; flex-direction:column; align-items:center; gap:0.8rem;
+  }
+  .card:hover { transform:translateY(-4px); }
+
+  .card.josh {
+    background:rgba(124,111,247,0.08);
+    border-color:rgba(124,111,247,0.3);
+    box-shadow:0 0 40px rgba(124,111,247,0.08);
+  }
+  .card.josh:hover { box-shadow:0 8px 40px rgba(124,111,247,0.2); }
+
+  .card.mama {
+    background:rgba(212,80,122,0.07);
+    border-color:rgba(212,80,122,0.25);
+    box-shadow:0 0 40px rgba(212,80,122,0.06);
+  }
+  .card.mama:hover { box-shadow:0 8px 40px rgba(212,80,122,0.18); }
+
+  .emoji { font-size:2.5rem; }
+
+  .card-name { font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; }
+  .card.josh .card-name { color:#a99fff; }
+  .card.mama .card-name { color:#f472b6; }
+
+  .card-sub { font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:#5a5880; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>mac<em>book</em></h1>
+  <p>wer bist du?</p>
+  <div class="cards">
+    <a class="card josh" href="josh.html">
+      <div class="emoji">🎮</div>
+      <div class="card-name">Josh</div>
+      <div class="card-sub">dein kalender</div>
+    </a>
+    <a class="card mama" href="mama.html">
+      <div class="emoji">👩</div>
+      <div class="card-name">Mama</div>
+      <div class="card-sub">ihr kalender</div>
+    </a>
+  </div>
+</div>
+</body>
+</html>
