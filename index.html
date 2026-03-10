@@ -23,34 +23,37 @@
   .cards { display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center; }
 
   .card {
-    width:220px; padding:2rem 1.5rem;
+    width:200px; padding:2rem 1.5rem;
     border-radius:20px; border:1px solid;
     text-decoration:none; cursor:pointer;
     transition:transform 0.2s, box-shadow 0.2s;
     display:flex; flex-direction:column; align-items:center; gap:0.8rem;
   }
-  .card:hover { transform:translateY(-4px); }
+  .card:hover { transform:translateY(-5px); }
 
   .card.josh {
-    background:rgba(124,111,247,0.08);
-    border-color:rgba(124,111,247,0.3);
+    background:rgba(124,111,247,0.08); border-color:rgba(124,111,247,0.3);
     box-shadow:0 0 40px rgba(124,111,247,0.08);
   }
   .card.josh:hover { box-shadow:0 8px 40px rgba(124,111,247,0.2); }
 
   .card.mama {
-    background:rgba(212,80,122,0.07);
-    border-color:rgba(212,80,122,0.25);
+    background:rgba(212,80,122,0.07); border-color:rgba(212,80,122,0.25);
     box-shadow:0 0 40px rgba(212,80,122,0.06);
   }
   .card.mama:hover { box-shadow:0 8px 40px rgba(212,80,122,0.18); }
 
-  .emoji { font-size:2.5rem; }
+  .card.sam {
+    background:rgba(79,126,247,0.08); border-color:rgba(79,126,247,0.3);
+    box-shadow:0 0 40px rgba(79,126,247,0.08);
+  }
+  .card.sam:hover { box-shadow:0 8px 40px rgba(79,126,247,0.22); }
 
+  .emoji { font-size:2.5rem; }
   .card-name { font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; }
   .card.josh .card-name { color:#a99fff; }
   .card.mama .card-name { color:#f472b6; }
-
+  .card.sam  .card-name { color:#89a8ff; }
   .card-sub { font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:#5a5880; }
 </style>
 </head>
@@ -68,6 +71,11 @@
       <div class="emoji">👩</div>
       <div class="card-name">Mama</div>
       <div class="card-sub">ihr kalender</div>
+    </a>
+    <a class="card sam" href="sam.html">
+      <div class="emoji">🎧</div>
+      <div class="card-name">Sam</div>
+      <div class="card-sub">sein kalender</div>
     </a>
   </div>
 </div>
